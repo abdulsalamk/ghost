@@ -1,0 +1,223 @@
+{
+  "version": 4,
+  "terraform_version": "1.0.5",
+  "serial": 42,
+  "lineage": "303bee52-80f6-daf6-09ba-0884d975d6b8",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "google_iam_policy",
+      "name": "noauth",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "audit_config": null,
+            "binding": [
+              {
+                "condition": [],
+                "members": [
+                  "allUsers"
+                ],
+                "role": "roles/run.invoker"
+              }
+            ],
+            "id": "3450855414",
+            "policy_data": "{\"bindings\":[{\"members\":[\"allUsers\"],\"role\":\"roles/run.invoker\"}]}"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_cloud_run_service",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "autogenerate_revision_name": false,
+            "id": "locations/europe-west2/namespaces/ghost-blog-324611/services/cloudrun-srv",
+            "location": "europe-west2",
+            "metadata": [
+              {
+                "annotations": {
+                  "run.googleapis.com/ingress": "all",
+                  "run.googleapis.com/ingress-status": "all",
+                  "serving.knative.dev/creator": "nordcloud21@gmail.com",
+                  "serving.knative.dev/lastModifier": "nordcloud21@gmail.com"
+                },
+                "generation": 2,
+                "labels": {
+                  "cloud.googleapis.com/location": "europe-west2"
+                },
+                "namespace": "ghost-blog-324611",
+                "resource_version": "AAXK3cg7QPA",
+                "self_link": "/apis/serving.knative.dev/v1/namespaces/282453063660/services/cloudrun-srv",
+                "uid": "2404f623-056d-4701-9260-da8880b08925"
+              }
+            ],
+            "name": "cloudrun-srv",
+            "project": "ghost-blog-324611",
+            "status": [
+              {
+                "conditions": [
+                  {
+                    "message": "",
+                    "reason": "",
+                    "status": "True",
+                    "type": "Ready"
+                  },
+                  {
+                    "message": "",
+                    "reason": "",
+                    "status": "True",
+                    "type": "ConfigurationsReady"
+                  },
+                  {
+                    "message": "",
+                    "reason": "",
+                    "status": "True",
+                    "type": "RoutesReady"
+                  }
+                ],
+                "latest_created_revision_name": "cloudrun-srv-fdvlk",
+                "latest_ready_revision_name": "cloudrun-srv-fdvlk",
+                "observed_generation": 2,
+                "url": "https://cloudrun-srv-q2zyihw7bq-nw.a.run.app"
+              }
+            ],
+            "template": [
+              {
+                "metadata": [
+                  {
+                    "annotations": {
+                      "autoscaling.knative.dev/maxScale": "100",
+                      "run.googleapis.com/cloudsql-instances": "ghost-blog-324611:europe-west2:cloudrundb1"
+                    },
+                    "generation": 0,
+                    "labels": {},
+                    "name": "",
+                    "namespace": "",
+                    "resource_version": "",
+                    "self_link": "",
+                    "uid": ""
+                  }
+                ],
+                "spec": [
+                  {
+                    "container_concurrency": 80,
+                    "containers": [
+                      {
+                        "args": [],
+                        "command": [],
+                        "env": [
+                          {
+                            "name": "DB_URL",
+                            "value": "mysql://cloudrun:cloudrun@/cloudrundb1?host=/cloudsql/ghost-blog-324611:europe-west2:cloudrundb1"
+                          },
+                          {
+                            "name": "ENV",
+                            "value": "production"
+                          }
+                        ],
+                        "env_from": [],
+                        "image": "gcr.io/ghost-blog-324611/ghost@sha256:4048f1a038c34f1b613fc09cc23cd2fcfad9a14db1ac617b417c529ecea43f17",
+                        "ports": [
+                          {
+                            "container_port": 2368,
+                            "name": "http1",
+                            "protocol": ""
+                          }
+                        ],
+                        "resources": [
+                          {
+                            "limits": {
+                              "cpu": "1000m",
+                              "memory": "512Mi"
+                            },
+                            "requests": {}
+                          }
+                        ],
+                        "working_dir": ""
+                      }
+                    ],
+                    "service_account_name": "",
+                    "serving_state": "",
+                    "timeout_seconds": 300
+                  }
+                ]
+              }
+            ],
+            "timeouts": null,
+            "traffic": [
+              {
+                "latest_revision": true,
+                "percent": 100,
+                "revision_name": ""
+              }
+            ]
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozNjAwMDAwMDAwMDAsImRlbGV0ZSI6MjQwMDAwMDAwMDAwLCJ1cGRhdGUiOjkwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_cloud_run_service_iam_policy",
+      "name": "noauth",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "etag": "BwXK2sVuvRc=",
+            "id": "v1/projects/ghost-blog-324611/locations/europe-west2/services/cloudrun-srv",
+            "location": "europe-west2",
+            "policy_data": "{\"bindings\":[{\"members\":[\"allUsers\"],\"role\":\"roles/run.invoker\"}]}",
+            "project": "ghost-blog-324611",
+            "service": "v1/projects/ghost-blog-324611/locations/europe-west2/services/cloudrun-srv"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.google_iam_policy.noauth",
+            "google_cloud_run_service.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_user",
+      "name": "users",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "deletion_policy": null,
+            "host": "",
+            "id": "cloudrun//cloudrundb1",
+            "instance": "cloudrundb1",
+            "name": "cloudrun",
+            "password": "cloudrun",
+            "project": "ghost-blog-324611",
+            "timeouts": null,
+            "type": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "google_sql_database_instance.master"
+          ]
+        }
+      ]
+    }
+  ]
+}
