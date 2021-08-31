@@ -12,8 +12,8 @@
 <h2> Step 1 upload ghost docker image to GCR </h2>
 Follow the steps below ..
 1. Pull the ghost image to local machine
-<code>
-    docker pull ghost:3.12.0
+<pre><code>
+    docker pull ghost:3.12.0 <br />
     docker tag ghost:3.12.0 gcr.io/<GCP_PROJECT_NAME>/ghost:3.12.0
     docker push gcr.io/<GCP_PROJECT_NAME>/ghost:3.12.0
-</code>
+</code></pre>
