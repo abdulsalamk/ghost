@@ -1,5 +1,6 @@
-<h1> Gost blog on Google Cloud Run </h1>
-<p>This is an opinionated module to install the popular blog platform <a href="https://ghost.org" target="_blank" >Ghost</a> in Google Cloud/Cloud Run.</p>
+# Gost blog on Google Cloud Run 
+
+This is an opinionated module to install the popular blog platform [Ghost](https://ghost.org) in Google Cloud/[Cloud Run](https://cloud.google.com/run).
 
 ## Pre-requisits
 
@@ -12,6 +13,7 @@
 ## Step 1 Push ghost docker image to GCR
 
 Follow the steps below ..
+
 1. Pull the ghost image to local machine, tag it and push it to GCR
 
 ```
@@ -30,5 +32,5 @@ Follow the steps below ..
 3. Make appropriate changes to the terraform.tfvars file for your environment
 4. Use Terraform init, followed by terraform apply command (May use terraform plan to look at the resources to be created and make appropraiet adjustments)
 
-***NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun Terraform attributes and supply it.***
+***NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun attributes and set the URL variable.***
 
