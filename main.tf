@@ -9,7 +9,7 @@ resource "google_cloud_run_service" "default" {
         image = var.dockerImage
         ports {
           container_port = 2368
-        }
+        }       
 
         env {
           name  = "ENV"
@@ -41,9 +41,10 @@ resource "google_cloud_run_service" "default" {
         }
         env {
           name  = "url"
-          value = "https://cloudrun-srv-q2zyihw7bq-nw.a.run.app"
+          value = "https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/"
         }
       }
+      container_concurrency = 80
     }
     metadata {
       annotations = {
