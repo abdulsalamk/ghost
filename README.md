@@ -36,4 +36,4 @@ Follow the steps below ..
 
 Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
 
-__It is not recommended to put the variables in plain text for production releases, please make use of [Google Secrets Manager] (https://cloud.google.com/secret-manager) to store the secrets__
+> **_NOTE:_**  The note content.It is not recommended to put the variables in plain text for production releases, please make use of [Google Secrets Manager](https://cloud.google.com/secret-manager) to store the secrets.
