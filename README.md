@@ -26,7 +26,7 @@ Follow the steps below ..
 
 ## Step 2 Create all required resources using Terraform
 
-1. Once the image is in GCR, copy the full path using the copy command next to the image (It should look like this gcr.io/ghost-blog-324611/ghost@sha256:4048f1a038c34f1b613fc09cc23cd2fcfad9a14db1ac617b417c529ecea43f17). Keep this saved this need to be available for Terraform.
+1. Once the image is in GCR, copy the full path using the copy command next to the image (It should look like this ```gcr.io/ghost-blog-324611/ghost@sha256:4048f1a038c34f1b613fc09cc23cd2fcfad9a14db1ac617b417c529ecea43f17```). Keep this saved this need to be available for Terraform.
 
 2. clone this repository to the local machine
 3. Make appropriate changes to the terraform.tfvars file for your environment
