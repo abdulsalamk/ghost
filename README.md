@@ -3,7 +3,7 @@
 
 ## Pre-requisits
 
-* [Docker service]("https://docs.docker.com/desktop/windows/install/") installed on the development machine.
+* [Docker service](https://docs.docker.com/desktop/windows/install/) installed on the development machine.
 * GCP account with at least one project
 * Cloud Run and Cloud SQL API's enabled
 * [Terraform](https://www.terraform.io/downloads.html) installed on the machine 
@@ -28,5 +28,5 @@ NOTE: You need to connect to your GCP account using GCP CLI commands
 4. Make appropriate changes to the terraform.tfvars file for your environment
 5. Use Terraform init, followed by terraform apply command (May use terraform plan to look at the resources to be created and make appropraiet adjustments)
 
-NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:8080" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun Terraform attributes and supply it.
+NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun Terraform attributes and supply it.
 
