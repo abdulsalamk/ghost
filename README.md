@@ -22,7 +22,7 @@ Follow the steps below ..
     docker push gcr.io/<GCP_PROJECT_NAME>/ghost:3.12.0
 ```
 
-***NOTE: You need to connect to your GCP account using GCP CLI commands***
+> **_NOTE:_** You need to connect to your GCP account using GCP CLI commands
 
 ## Step 2 Create all required resources using Terraform
 
@@ -32,7 +32,7 @@ Follow the steps below ..
 3. Make appropriate changes to the terraform.tfvars file for your environment
 4. Use Terraform init, followed by terraform apply command (May use terraform plan to look at the resources to be created and make appropraiet adjustments)
 
-***NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun attributes and set the URL variable.***
+> **_NOTE:_** One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun attributes and set the URL variable.
 
 Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
 
