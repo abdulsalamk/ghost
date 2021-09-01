@@ -39,12 +39,8 @@ resource "google_cloud_run_service" "default" {
           name  = "database__connection__socketPath"
           value = "/cloudsql/${var.project_name}:${var.region}:${var.database_instance}"
         }
-        # env {
-        #     # name="DB_URL"
-        #     # value = "mysql://${var.database_user}:${var.database_password}@/${var.database_instance}?host=/cloudsql/ghost-blog-324611:europe-west2:cloudrundb2"
-        # }
         env {
-          name  = "URL"
+          name  = "url"
           value = "https://cloudrun-srv-q2zyihw7bq-nw.a.run.app"
         }
       }
