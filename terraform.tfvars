@@ -4,5 +4,4 @@ database_password = "cloudrun"
 database_name = "cloudrundb"
 project_name = "ghost-blog-324611"
 region ="europe-west2"
-
-
+dockeImage = "gcr.io/ghost-blog-324611/ghost@sha256:4048f1a038c34f1b613fc09cc23cd2fcfad9a14db1ac617b417c529ecea43f17"

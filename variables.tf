@@ -23,3 +23,7 @@ variable "region" {
     type=string
     default = "europe-west2"
 }
+variable "dockerImage" {
+    type=string
+    default = "gcr.io/ghost-blog-324611/ghost@sha256:4048f1a038c34f1b613fc09cc23cd2fcfad9a14db1ac617b417c529ecea43f17"
+}
