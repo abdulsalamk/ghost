@@ -34,4 +34,4 @@ Follow the steps below ..
 
 ***NOTE: One of the issues I have come across ghost is, it defaults to "http://localhost:2368" for the links other than the home page. This can be fixed by setting the ENV variable "URL". If you have a custom domain you may supplply it here and make necessary DNS changes. If you don't have one you should be able to use the Cloud Run endpoint. This means you have to run the terraform apply twice or write some scripts to read it from the CloudRun attributes and set the URL variable.***
 
-Finally. A Cloud run hosted website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
+Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
