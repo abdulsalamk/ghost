@@ -1,5 +1,5 @@
 resource "google_cloud_run_service" "default" {
-  name     = "cloudrun-srv"
+  name     = "ghost-cloudrun"
   location = var.region
   project  = var.project_name
 
