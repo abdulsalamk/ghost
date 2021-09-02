@@ -33,7 +33,7 @@ Follow the steps below ..
 4. Use Terraform init, followed by terraform apply command (May use terraform plan to look at the resources to be created and make appropraiet adjustments)
 
 > **_NOTE:_** One of the issues I have come across ghost is you get a 503 error on the first hit on the app. The reason for this ghost takes up to a minute to start the application. The fix for this could be either to fix it in ghost (may be to deliver what is in the cache) or keep at least one container running by adding the following line.
-```Terraform  "autoscaling.knative.dev/minscale" = "1"```
+```"autoscaling.knative.dev/minscale" = "1"```
 
 Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
 
