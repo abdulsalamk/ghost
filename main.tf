@@ -48,16 +48,12 @@ resource "google_cloud_run_service" "default" {
     }
     metadata {
       annotations = {
+        "autoscaling.knative.dev/minscale" = "1" #ghost takes over a minute to start up. Hence this line!
         "autoscaling.knative.dev/maxScale"      = "1000"
         "run.googleapis.com/cloudsql-instances" = "${var.project_name}:${var.region}:${var.database_instance}"
         "run.googleapis.com/client-name"        = "terraform"
       }
     }
-    # metadata {
-    #   annotations = {
-    #     "run.googleapis.com/cloudsql-instances" = "ghost-blog-324611:europe-west2:cloudrundb2"
-    #   }
-    # }
   }
 
   traffic {
