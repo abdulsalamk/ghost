@@ -35,7 +35,7 @@ Follow the steps below ..
 > **_NOTE:_** One of the issues I have come across ghost is you get a 503 error on the first hit on the app. The reason for this ghost takes up to a minute to start the application. The fix for this could be either to fix it in ghost (may be to deliver what is in the cache until it comes online?) or keep at least one container running by adding the following line.
 ```"autoscaling.knative.dev/minscale" = "1"```
 
-Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
+Finally. An example Cloud run hosted ghost website can be found [here](https://ghost-cloudrun-rdvuf5br2a-nw.a.run.app/)
 
 > **_NOTE:_**  The note content.It is not recommended to put the variables in plain text for production releases, please make use of [Google Secrets Manager](https://cloud.google.com/secret-manager) to store the secrets.
 
