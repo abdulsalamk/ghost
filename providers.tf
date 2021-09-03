@@ -1,14 +1,14 @@
 terraform {
-  required_version = ">= 0.14"
-
+  required_version = ">= 1"
   required_providers {
     google = {
-      source = "hashicorp/google"
-      version = ">= 3.67.0"
-    }
-    google-beta = {
-      source = "hashicorp/google-beta"
-      version = ">= 3.67.0"
+      source  = "hashicorp/google"
+      version = "3.82.0"
     }
   }
+}
+provider "google" {
+  region  = var.region
+  project =  var.project_name
+  # Configuration options
 }
