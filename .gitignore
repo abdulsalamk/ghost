@@ -3,4 +3,6 @@ terraform.tfstate
 .terraform.lock.hcl
 .terraform.tfstate.lock.info
 .gcloudignore
-.terraform
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
