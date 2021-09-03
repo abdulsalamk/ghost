@@ -2,4 +2,5 @@ terraform.tfstate.backup
 terraform.tfstate
 .terraform.lock.hcl
 .terraform.tfstate.lock.info
-.terraform/
+.gcloudignore
+.terraform
