@@ -41,14 +41,14 @@ resource "google_cloud_run_service" "default" {
         }
         env {
           name  = "url"
-          value = "https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/"
+          value =  "https://ghost-cloudrun-rdvuf5br2a-nw.a.run.app"
         }
       }
       container_concurrency = 80
     }
     metadata {
       annotations = {
-        "autoscaling.knative.dev/minscale" = "1" #ghost takes over a minute to start up. Hence this line!
+        "autoscaling.knative.dev/minScale" = "1" #ghost takes over a minute to start up. Hence this line!
         "autoscaling.knative.dev/maxScale"      = "1000"
         "run.googleapis.com/cloudsql-instances" = "${var.project_name}:${var.region}:${var.database_instance}"
         "run.googleapis.com/client-name"        = "terraform"
