@@ -19,9 +19,15 @@ variable "project_name" {
     type=string
     default = "ghost-blog-324611"    
 }
+
 variable "region" {
     type=string
     default = "europe-west2"
+}
+
+variable "network_name" {
+    type=string
+    default = "drone-network"
 }
 variable "dockerImage" {
     type=string

@@ -41,7 +41,7 @@ Finally. An example Cloud run hosted ghost website can be found [here](https://c
 
 # Bulk deletion of blogs
 
-The bulk deletion of the blogs are done using the cloudrun function called "delete" in "ghost-posts". This achieve using a cloud function module written in Python 3.9. The code can be found in "main.py". It connects directly to the database and deletes al records from the table "posts" (NOTE: The script has set it as emails as I don't wanted to remove all blogs. Just change the parameter db_table = "emails" of main.py to "posts").
+The bulk deletion of the blogs are done using the cloudrun function called "delete" in "ghost-posts". This achieve using a cloud function module written in Python 3.9. The code can be found in "main.py". It connects directly to the database and deletes al records from the table "posts". (NOTE: The script has set it as emails as I don't wanted to remove all blogs. Just change the parameter db_table = "emails" of main.py to "posts").
 
 The terraform file couldfunction.tf does everything to do with publishing this code. It zips up everything in the folder "scripts" an uploads it to the cloudfunctions. 
 
