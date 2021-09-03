@@ -69,7 +69,7 @@ From the requirements it isn't clear what part of the application need to be on 
 
 # Security
 
-I don't think this is something we can implement seperately, every component mentioned above should be built with security in mind. The service accounts used in the PoC may not necessarily use the principle of least privileges, but this is extremely important while creating the services in production. There can mu ch improvements on the logging, monitoring and alerting. Giving a single dashboard for the security team. Google's on Site Reliability Engineering methods can be implimented for self correcting applicatins. Tools like "Cloud Armor" may be used for the network security. 
+I don't think this is something we can implement seperately, every component mentioned above should be built with security in mind. The service accounts used in the PoC may not necessarily use the principle of least privileges, but this is extremely important while creating the services in production. There can be many improvements on the logging, monitoring and alerting. Giving a single dashboard for the security team. Google's on Site Reliability Engineering methods can be implimented for self correcting applicatins. Tools like "Cloud Armor" may be used for the network security. 
 
 
 
