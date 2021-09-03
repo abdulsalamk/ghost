@@ -38,3 +38,12 @@ Follow the steps below ..
 Finally. An example Cloud run hosted ghost website can be found [here](https://cloudrun-srv-rdvuf5br2a-nw.a.run.app/)
 
 > **_NOTE:_**  The note content.It is not recommended to put the variables in plain text for production releases, please make use of [Google Secrets Manager](https://cloud.google.com/secret-manager) to store the secrets.
+
+# Bulk deletion of blogs
+
+The bulk deletion of the blogs are done using the cloudrun function called "delete" in "ghost-posts". This achieve using a cloud function module written in Python 3.9. The code can be found in "main.py". It connects directly to the database and deletes al records from the table "posts" (NOTE: The script has set it as emails as I don't wanted to remove all blogs. Just change the parameter db_table = "emails" of main.py to "posts").
+
+The terraform file couldfunction.tf does everything to do with publishing this code. It zips up everything in the folder "scripts" an uploads it to the cloudfunctions. 
+
+> **_NOTE_**  You might see a hashing function added to the name attribute blucket name. This is to make it unique each time, otherwise it shows up an error. The code is below
+```name                =  format("%s#%s", "ghost-posts.zip", data.archive_file.function_archive.output_md5)```
