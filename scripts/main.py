@@ -56,8 +56,7 @@ def delete(request):
         logger.exception(e)
         return Response(
             status=500,
-            response="Unable to successfully cast vote! Please check the "
-            "application logs for more details.",
+            response="Unable to delete blogs from the database",
         )
     return Response(
         status=200,

@@ -96,19 +96,19 @@ resource "google_project_iam_binding" "sa" {
 }
 
 
-#----------------------------------------------------------------------------------------------
-#  Enabling APIs for Sheet and Drive
-#----------------------------------------------------------------------------------------------
+# #----------------------------------------------------------------------------------------------
+# #  Enabling APIs for Sheet and Drive
+# #----------------------------------------------------------------------------------------------
 
-resource "google_project_service" "sheet" {
-  service = "sheets.googleapis.com"
-  disable_on_destroy = false
-}
+# resource "google_project_service" "sheet" {
+#   service = "sheets.googleapis.com"
+#   disable_on_destroy = false
+# }
 
-resource "google_project_service" "drive" {
-  service = "drive.googleapis.com"
-  disable_on_destroy = false
-}
+# resource "google_project_service" "drive" {
+#   service = "drive.googleapis.com"
+#   disable_on_destroy = false
+# }
 
 
 #----------------------------------------------------------------------------------------------
